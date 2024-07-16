@@ -25,6 +25,7 @@ export default function Hello() {
         <Center h="100%">
             <Box maxW='32rem'>
                 <Heading mb={4} size="2xl">Welcome to my site!!</Heading>
+                <Heading mb={4} size="2xl">Faker</Heading>
             </Box>
         </Center>;
 
