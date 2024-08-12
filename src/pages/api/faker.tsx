@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import { MdBuild , MdCall } from "react-icons/md"
 import { Stack, HStack, VStack } from '@chakra-ui/react'
@@ -12,19 +11,12 @@ import { Box } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 import { Center, Square, Circle } from '@chakra-ui/react'
 import { Input ,Flex} from "@chakra-ui/react";
-import NextLink from "next/link"
-import {useColorMode, useColorModeValue } from "@chakra-ui/react";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Hello() {
-
-    const { toggleColorMode } = useColorMode();
-    const formBackGround = useColorModeValue("gray.100", "gray.700");
-
+export default function Faker() {
   return (
-
+/*    
     <div>
         <VStack spacing="3">
             <Box w="full" h="100px" bgColor="white"></Box>
@@ -33,6 +25,7 @@ export default function Hello() {
         <Center h="100%">
             <Box maxW='32rem'>
                 <Heading mb={4} size="2xl">Welcome to my site!!</Heading>
+                <Heading mb={4} size="2xl">Faker</Heading>
             </Box>
         </Center>
 
@@ -110,29 +103,23 @@ export default function Hello() {
                 </TabPanel>
             </TabPanels>
         </Tabs>
-
-        <div>
-      <Flex height="100vh" alignItems="center" justifyContent="center">
-      <Flex direction="column" background={formBackGround} p={12} rounded={6}>
-        <Heading mb={6}>Log in</Heading>
-        <Input
+    </div>
+   */
+  
+  <Flex height="100vh" alignItems="center" justifyContent="center">
+    <Flex direction="column" background="gray.100" padding={12} rounded={6}>
+      <Heading mb={6}>Log in</Heading>
+      <Input
         placeholder="faker@chakra-ui.com"
         variant="filled"
         mb={3}
         type="email"
-        />
-        <Input placeholder="*******" variant="filled" type="password" mb={6} />
-        <NextLink href="https://iyatomi-lab.info/top" passHref>
-            <Button colorScheme="teal" as="a">
-                Log in
-            </Button>
-        </NextLink>
-        <Button onClick={toggleColorMode}>Toggle Color Mode</Button>
-      </Flex>
-    </Flex>  
-    </div>
-    </div>
-
+      />
+      <Input placeholder="*******" variant="filled" type="password" />
+      <Button colorScheme="teal" as='a' href="">as=a Log in</Button>
+    </Flex>
+  </Flex>
+  
     
   );
 }
