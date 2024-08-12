@@ -1,16 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button} from '@chakra-ui/react'
 import { MdBuild , MdCall } from "react-icons/md"
-import { Stack, HStack, VStack } from '@chakra-ui/react'
-import { Switch } from '@chakra-ui/react'
+import { Stack, VStack } from '@chakra-ui/react'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { Heading } from '@chakra-ui/react'
 import { Box } from '@chakra-ui/react'
-import { Text } from '@chakra-ui/react'
-import { Center, Square, Circle } from '@chakra-ui/react'
+import { Center} from '@chakra-ui/react'
 import { Input ,Flex} from "@chakra-ui/react";
 import NextLink from "next/link"
 import {useColorMode, useColorModeValue } from "@chakra-ui/react";
@@ -72,6 +67,26 @@ export default function Hello() {
                             </Button>
                         </Stack>
                     </div>
+                    <div>
+                        <Flex height="100vh" alignItems="center" justifyContent="center">
+                        <Flex direction="column" background={formBackGround} p={12} rounded={6}>
+                            <Heading mb={6}>Log in</Heading>
+                            <Input
+                            placeholder="faker@chakra-ui.com"
+                            variant="filled"
+                            mb={3}
+                            type="email"
+                            />
+                            <Input placeholder="*******" variant="filled" type="password" mb={6} />
+                            <NextLink href="https://iyatomi-lab.info/top" passHref>
+                                <Button colorScheme="teal"  variant='outline' as="a">
+                                    Log in
+                                </Button>
+                            </NextLink>
+                            <Button onClick={toggleColorMode}>Toggle Color Mode</Button>
+                        </Flex>
+                        </Flex>  
+                    </div>
                 </TabPanel>
 
                 <TabPanel>
@@ -110,27 +125,6 @@ export default function Hello() {
                 </TabPanel>
             </TabPanels>
         </Tabs>
-
-        <div>
-      <Flex height="100vh" alignItems="center" justifyContent="center">
-      <Flex direction="column" background={formBackGround} p={12} rounded={6}>
-        <Heading mb={6}>Log in</Heading>
-        <Input
-        placeholder="faker@chakra-ui.com"
-        variant="filled"
-        mb={3}
-        type="email"
-        />
-        <Input placeholder="*******" variant="filled" type="password" mb={6} />
-        <NextLink href="https://iyatomi-lab.info/top" passHref>
-            <Button colorScheme="teal" as="a">
-                Log in
-            </Button>
-        </NextLink>
-        <Button onClick={toggleColorMode}>Toggle Color Mode</Button>
-      </Flex>
-    </Flex>  
-    </div>
     </div>
 
     
